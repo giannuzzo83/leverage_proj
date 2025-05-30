@@ -9,87 +9,98 @@
     body {
       background: #0e0f14; color: #d1d4dc;
       font-family: 'Helvetica Neue', Arial, sans-serif;
-      margin:0; padding:20px;
+      margin: 0; padding: 20px;
     }
-    h1 { color:#ff9800; text-align:center; margin-bottom:16px; }
+    h1 {
+      color: #ff9800; text-align: center; margin-bottom: 16px;
+    }
     .layout {
-      display:grid;
-      grid-template-columns:240px 240px 1fr;
-      gap:12px; max-width:1400px; margin:auto;
-      align-items:start;
+      display: grid;
+      grid-template-columns: 240px 240px 1fr;
+      gap: 12px;
+      max-width: 1400px; margin: auto;
+      align-items: start;
     }
     .form, .strategies {
-      background:#131722; padding:12px;
-      border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.5);
+      background: #131722; padding: 12px;
+      border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
     .form h2, .strategies h2 {
-      margin:0 0 8px; font-size:1em; color:#fff;
+      margin: 0 0 8px; font-size: 1em; color: #fff;
     }
     label {
-      display:block; margin:6px 0 2px;
-      font-size:0.85em; color:#8a8e98;
+      display: block; margin: 6px 0 2px;
+      font-size: 0.85em; color: #8a8e98;
     }
-    input[type="text"], input[type="number"], input[type="date"] {
-      width:100%; padding:6px 8px;
-      background:#1e2028; border:1px solid #2a2e3b;
-      border-radius:4px; color:#e1e4eb; font-size:0.9em;
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%; padding: 6px 8px;
+      background: #1e2028; border: 1px solid #2a2e3b;
+      border-radius: 4px; color: #e1e4eb; font-size: 0.9em;
     }
     button {
-      margin-top:10px; background:#ff9800;
-      border:none; color:#131722;
-      padding:6px; width:100%; border-radius:4px;
-      font-size:0.9em; cursor:pointer; transition:background .2s;
+      margin-top: 10px; background: #ff9800;
+      border: none; color: #131722;
+      padding: 6px; width: 100%; border-radius: 4px;
+      font-size: 0.9em; cursor: pointer; transition: background .2s;
     }
-    button:hover { background:#ffb347; }
+    button:hover { background: #ffb347; }
     .strategy-card {
-      background:#1e2028; border-left:4px solid;
-      padding:6px; margin-bottom:6px; border-radius:4px;
-      font-size:0.85em; display:flex; flex-direction:column;
+      background: #1e2028; border-left: 4px solid;
+      padding: 6px; margin-bottom: 6px; border-radius: 4px;
+      font-size: 0.85em; display: flex; flex-direction: column;
     }
-    .strategy-card h4 { margin:0; font-size:0.95em; color:#fff; }
-    .strategy-card .alloc { color:#8a8e98; font-size:0.8em; }
+    .strategy-card h4 {
+      margin: 0; font-size: 0.95em; color: #fff;
+    }
+    .strategy-card .alloc {
+      color: #8a8e98; font-size: 0.8em;
+    }
     .strategy-card button {
-      align-self:flex-end; background:transparent;
-      color:#ff4d4d; border:1px solid #ff4d4d;
-      padding:2px 6px; border-radius:4px; font-size:0.75em;
+      align-self: flex-end; background: transparent;
+      color: #ff4d4d; border: 1px solid #ff4d4d;
+      padding: 2px 6px; border-radius: 4px; font-size: 0.75em;
+      cursor: pointer;
     }
     .strategy-card button:hover {
-      background:#ff4d4d; color:#fff;
+      background: #ff4d4d; color: #fff;
     }
     .chart-container {
-      background:#131722; padding:12px;
-      border-radius:6px; height:400px;
+      background: #131722; padding: 12px;
+      border-radius: 6px; height: 400px;
     }
     canvas {
-      background:#0e0f14; border-radius:4px;
-      display:block; height:100% !important;
+      background: #0e0f14; border-radius: 4px;
+      display: block; height: 100% !important;
     }
     .results-table {
-      background:#131722; border-radius:6px;
-      padding:12px; margin:16px auto 0;
-      max-width:800px; box-shadow:0 2px 8px rgba(0,0,0,0.5);
-      font-size:0.85em;
+      background: #131722; border-radius: 6px;
+      padding: 12px; margin: 16px auto 0;
+      max-width: 800px; box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      font-size: 0.85em;
     }
     .results-table h2 {
-      margin:0 0 8px; color:#fff; font-size:1em;
+      margin: 0 0 8px; color: #fff; font-size: 1em;
     }
     .capital-input {
-      display:flex; align-items:center; gap:8px;
-      margin-bottom:8px; color:#8a8e98;
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 8px; color: #8a8e98;
     }
-    .capital-input input { width:120px; }
+    .capital-input input {
+      width: 120px;
+    }
     table {
-      width:100%; border-collapse:collapse;
+      width: 100%; border-collapse: collapse;
     }
     th, td {
-      padding:6px 8px; text-align:left;
+      padding: 6px 8px; text-align: left;
     }
     th {
-      background:#1e2028; color:#8a8e98;
-      font-weight:normal;
+      background: #1e2028; color: #8a8e98; font-weight: normal;
     }
     tr:not(:last-child) td {
-      border-bottom:1px solid #2a2e3b;
+      border-bottom: 1px solid #2a2e3b;
     }
   </style>
 </head>
@@ -97,7 +108,7 @@
   <h1>Simulatore Strategie BTC</h1>
 
   <div class="layout">
-    <!-- Nuova Strategia -->
+    <!-- Form Nuova Strategia -->
     <div class="form">
       <h2>Nuova Strategia</h2>
       <label>Nome</label>
@@ -136,8 +147,11 @@
     <table>
       <thead>
         <tr>
-          <th>Strategia</th><th>Ritorno %</th><th>Max Drawdown %</th>
-          <th>Valore Finale ($)</th><th>Delta ($)</th>
+          <th>Strategia</th>
+          <th>Ritorno %</th>
+          <th>Max Drawdown %</th>
+          <th>Valore Finale ($)</th>
+          <th>Delta ($)</th>
         </tr>
       </thead>
       <tbody id="resultsBody"></tbody>
@@ -149,18 +163,20 @@
     const DEFAULT_START = new Date('2010-01-01').getTime();
     let strategies = [], chart, creativeCount = 0;
 
-    // Prendo TUTTI i dati da CoinGecko
+    // 1) Prendo TUTTI i dati storici da CoinCap
     async function fetchBTCPrices() {
-      const res = await fetch(
-        'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart' +
-        '?vs_currency=usd&days=max&interval=daily'
-      );
-      const j = await res.json();
-      return j.prices;  // [[ms, prezzo], ...]
+      const startMs = DEFAULT_START;            // 1/1/2010
+      const endMs   = Date.now();               // oggi
+      const url = `https://api.coincap.io/v2/assets/bitcoin/history`
+                + `?interval=d1&start=${startMs}&end=${endMs}`;
+      const res = await fetch(url);
+      const json = await res.json();
+      // json.data = [ { priceUsd, time }, ... ]
+      return json.data.map(d => [ d.time, parseFloat(d.priceUsd) ]);
     }
 
     function computeReturns(prices) {
-      return prices.map((p,i) => i
+      return prices.map((p,i)=> i
         ? (p - prices[i-1]) / prices[i-1]
         : 0
       );
@@ -168,7 +184,7 @@
 
     function simulateCurve(rets, alloc) {
       const curve = [100];
-      for (let i = 1; i < rets.length; i++) {
+      for (let i=1; i<rets.length; i++) {
         const r = alloc.spot * rets[i]
                 + alloc.lev2 * 2 * rets[i]
                 + alloc.lev3 * 3 * rets[i];
@@ -188,22 +204,22 @@
     }
 
     function updateStrategyList() {
-      const c = document.getElementById('strategyList');
-      c.innerHTML = '';
+      const container = document.getElementById('strategyList');
+      container.innerHTML = '';
       strategies.forEach((s,i) => {
-        const d = document.createElement('div');
-        d.className = 'strategy-card';
-        d.style.borderColor = s.color;
-        d.innerHTML = `
+        const div = document.createElement('div');
+        div.className = 'strategy-card';
+        div.style.borderColor = s.color;
+        div.innerHTML = `
           <h4>${s.name}</h4>
           <div class="alloc">
-            ${(s.alloc.spot*100).toFixed(0)}% | 
-            ${(s.alloc.lev2*100).toFixed(0)}%×2 | 
+            ${(s.alloc.spot*100).toFixed(0)}% |
+            ${(s.alloc.lev2*100).toFixed(0)}%×2 |
             ${(s.alloc.lev3*100).toFixed(0)}%×3
           </div>
           <button onclick="removeStrategy(${i})">✕</button>
         `;
-        c.appendChild(d);
+        container.appendChild(div);
       });
     }
 
@@ -213,16 +229,16 @@
       renderChart();
     }
 
+    // 2) Renderizzo il grafico e la tabella
     async function renderChart() {
-      // 1) fetch  2) filtro per data  3) costruisco dati
       try {
-        const all = await fetchBTCPrices();
-        const sd = document.getElementById('startDate').value;
+        const dataAll = await fetchBTCPrices();
+        const sd   = document.getElementById('startDate').value;
         const startMs = sd ? new Date(sd).getTime() : DEFAULT_START;
-        const data = all.filter(p => p[0] >= startMs);
+        const dataFilt = dataAll.filter(p => p[0] >= startMs);
 
-        const prices = data.map(p => p[1]);
-        const labels = data.map(p => {
+        const prices = dataFilt.map(p => p[1]);
+        const labels = dataFilt.map(p => {
           const d = new Date(p[0]);
           const dd = String(d.getDate()).padStart(2,'0');
           const mo = monthNames[d.getMonth()];
@@ -231,70 +247,74 @@
         });
         const rets = computeReturns(prices);
 
-        // curve
-        const spotCurve = simulateCurve(rets,{spot:1,lev2:0,lev3:0});
+        const spotCurve = simulateCurve(rets, {spot:1,lev2:0,lev3:0});
         const datasets = [{
-          label:'Spot',
-          data:spotCurve,
-          borderColor:'#ff9800', borderWidth:2,
-          fill:false, tension:0.2, pointRadius:0
+          label: 'Spot',
+          data: spotCurve,
+          borderColor: '#ff9800',
+          borderWidth: 2, fill: false, tension: 0.2, pointRadius: 0
         }].concat(strategies.map(s => ({
-          label:s.name,
-          data:simulateCurve(rets,s.alloc),
-          borderColor:s.color, borderWidth:2,
-          fill:false, tension:0.2, pointRadius:0
+          label: s.name,
+          data: simulateCurve(rets, s.alloc),
+          borderColor: s.color,
+          borderWidth: 2, fill: false, tension: 0.2, pointRadius: 0
         })));
 
         if (chart) chart.destroy();
         chart = new Chart(
           document.getElementById('btcChart'),
           {
-            type:'line',
-            data:{labels,datasets},
-            options:{
-              responsive:true,
-              maintainAspectRatio:false,
-              interaction:{mode:'index',intersect:false},
-              layout:{padding:{right:60}},
-              scales:{
-                x:{ grid:{color:'#2a2e3b'},
-                    ticks:{color:'#8a8e98',maxRotation:45,minRotation:45,autoSkip:true} },
-                y:{ grid:{color:'#2a2e3b'},
-                    ticks:{color:'#8a8e98'} }
+            type: 'line',
+            data: { labels, datasets },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              interaction: { mode:'index', intersect:false },
+              layout: { padding:{ right:60 } },
+              scales: {
+                x: {
+                  grid: { color:'#2a2e3b' },
+                  ticks: { color:'#8a8e98', maxRotation:45, minRotation:45, autoSkip:true }
+                },
+                y: {
+                  grid: { color:'#2a2e3b' },
+                  ticks: { color:'#8a8e98' }
+                }
               },
-              plugins:{
-                legend:{labels:{color:'#d1d4dc'}},
-                tooltip:{mode:'index',intersect:false}
+              plugins: {
+                legend: { labels:{ color:'#d1d4dc' } },
+                tooltip: { mode:'index', intersect:false }
               },
-              elements:{point:{radius:0}}
+              elements: { point:{ radius:0 } }
             }
           }
         );
 
-        // tabella
+        // Tabella
         const body = document.getElementById('resultsBody');
         body.innerHTML = '';
-        const capital = parseFloat(document.getElementById('initialCapital').value)||100000;
-        const spotRet = spotCurve.at(-1)-100;
+        const capital = parseFloat(document.getElementById('initialCapital').value) || 100000;
+
+        // Spot
+        const spotRet = spotCurve.at(-1) - 100;
         const spotVal = capital * (spotCurve.at(-1)/100);
         const spotDd  = maxDrawdown(spotCurve);
-
-        // riga Spot
-        const rowS = document.createElement('tr');
-        rowS.innerHTML = `
+        const row0 = document.createElement('tr');
+        row0.innerHTML = `
           <td style="color:#ff9800">Spot</td>
           <td>${spotRet.toFixed(1)}%</td>
           <td>${spotDd.toFixed(1)}%</td>
           <td>$${spotVal.toLocaleString()}</td>
-          <td>$0</td>`;
-        body.appendChild(rowS);
+          <td>$0</td>
+        `;
+        body.appendChild(row0);
 
-        // strategie
+        // Strategie
         datasets.slice(1).forEach(ds => {
-          const c = ds.data;
-          const ret   = c.at(-1)-100;
-          const dd    = maxDrawdown(c);
-          const val   = capital*(c.at(-1)/100);
+          const c   = ds.data;
+          const ret = c.at(-1) - 100;
+          const dd  = maxDrawdown(c);
+          const val = capital * (c.at(-1)/100);
           const delta = val - spotVal;
           const r = document.createElement('tr');
           r.innerHTML = `
@@ -318,12 +338,11 @@
       const lev2 = +document.getElementById('lev2').value/100;
       const lev3 = +document.getElementById('lev3').value/100;
       if (!name) return alert('Inserisci un nome');
-      if (Math.abs(spot+lev2+lev3-1) > 0.01)
-        return alert('Le percentuali devono sommare 100');
+      if (Math.abs(spot+lev2+lev3-1) > 0.01) return alert('Le % devono sommare 100');
       strategies.push({
         name,
-        alloc:{spot,lev2,lev3},
-        color:`hsl(${Math.random()*360},70%,60%)`
+        alloc: { spot, lev2, lev3 },
+        color: `hsl(${Math.random()*360},70%,60%)`
       });
       updateStrategyList();
       renderChart();
@@ -336,8 +355,8 @@
       const s = a+b+c; a/=s; b/=s; c/=s;
       strategies.push({
         name,
-        alloc:{spot:a,lev2:b,lev3:c},
-        color:`hsl(${Math.random()*360},70%,60%)`
+        alloc: { spot: a, lev2: b, lev3: c },
+        color: `hsl(${Math.random()*360},70%,60%)`
       });
       updateStrategyList();
       renderChart();
